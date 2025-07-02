@@ -4,7 +4,6 @@ import com.devsuperior.movieflix.dto.GenreDTO;
 import com.devsuperior.movieflix.entities.Genre;
 import com.devsuperior.movieflix.repositories.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,4 +20,6 @@ public class GenreService {
        List<Genre> genresList= repository.findAll();
        return genresList.stream().map(x -> new GenreDTO(x)).toList();
     }
+
+
 }
